@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wealth Strategy Assistant</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    input, select { margin: 0.5em 0; padding: 0.5em; width: 100%; }
+    .card { border: 1px solid #ccc; padding: 1em; margin-top: 1em; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+<h1>Wealth Strategy Assistant</h1>
+
+<label>Annual Income</label>
+<input type="number" id="income" placeholder="Enter your annual income" />
+
+<label>Risk Profile</label>
+<select id="risk">
+  <option value="low">Low</option>
+  <option value="medium">Medium</option>
+  <option value="high">High</option>
+</select>
+
+<button onclick="generateAdvice()">Get Strategy Advice</button>
+
+<div id="advice"></div>
+
+<script>
+function generateAdvice() {
+  const income = parseFloat(document.getElementById("income").value);
+  const risk = document.getElementById("risk").value;
+  let advice = [];
+
+  // Simple logic rules
+  if (income > 100000) advice.push("Focus on tax-efficient strategies.");
+  if (risk === "high") advice.push("Consider diversified long-term positions.");
+  if (income < 50000) advice.push("Emphasize disciplined saving and tax-loss opportunities.");
+
+  // Render
+  const container = document.getElementById("advice");
+  container.innerHTML = '';
+  advice.forEach(msg => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.textContent = msg;
+    container.appendChild(card);
+  });
+}
+</script>
+
+</body>
+</html>
