@@ -60,6 +60,262 @@ function generateAdvice() {
     container.appendChild(card);
   });
 }
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sista Big Dress Wealth | Wealth Maintenance Program</title>
+
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+    color: #002E45;
+  }
+
+  header {
+    background: linear-gradient(135deg, #002E45, #058397);
+    color: white;
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+  }
+
+  header p {
+    margin-top: 0.75rem;
+    font-size: 1.1rem;
+    opacity: 0.95;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    border-left: 6px solid #90C53D;
+    padding-left: 1rem;
+  }
+
+  .input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  input, select {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background: #90C53D;
+    color: #002E45;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  button:hover {
+    background: #7fb532;
+  }
+
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #058397;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    background: #002E45;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Sista Big Dress Wealth</h1>
+  <p>🌐 Wealth Maintenance Program Series  
+     <br/>Stewardship • Strategy • Continuity</p>
+</header>
+
+<main>
+
+<!-- PROGRAM INTRO -->
+<section>
+  <h2>Program Overview</h2>
+  <div class="card">
+    <p>
+      This program is designed to help participants understand, apply, and maintain
+      wealth strategies over time. It emphasizes <strong>maintenance, protection,
+      and continuity</strong> rather than short-term gain.
+    </p>
+    <p>
+      This is an educational system. All data is simulated.
+    </p>
+  </div>
+</section>
+
+<!-- PARTICIPANT INPUT -->
+<section>
+  <h2>Participant Wealth Profile</h2>
+
+  <div class="input-grid">
+    <input type="number" id="income" placeholder="Annual Income ($)" />
+    <input type="number" id="assets" placeholder="Total Assets ($)" />
+    <select id="risk">
+      <option value="">Risk Profile</option>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <select id="timeline">
+      <option value="">Wealth Timeline</option>
+      <option value="short">Short-Term</option>
+      <option value="long">Long-Term</option>
+    </select>
+  </div>
+
+  <button onclick="runProgram()">Generate Wealth Maintenance Plan</button>
+</section>
+
+<!-- RESULTS -->
+<section>
+  <h2>Wealth Maintenance Modules</h2>
+  <div id="results"></div>
+</section>
+
+<!-- CURRICULUM -->
+<section>
+  <h2>Extended Learning Series</h2>
+
+  <div class="card">
+    <span class="badge">Module 1</span>
+    <h3>Wealth Is a System</h3>
+    <p><strong>Concept:</strong> Wealth must be maintained, not just created.</p>
+    <p><strong>Reflection:</strong> What currently protects your wealth?</p>
+  </div>
+
+  <div class="card">
+    <span class="badge">Module 2</span>
+    <h3>Tax Drag Awareness</h3>
+    <p><strong>Concept:</strong> Taxes quietly erode long-term wealth.</p>
+    <p><strong>Reflection:</strong> Where does value leak each year?</p>
+  </div>
+
+  <div class="card">
+    <span class="badge">Module 3</span>
+    <h3>Time as an Asset</h3>
+    <p><strong>Concept:</strong> Stability allows compounding to work.</p>
+    <p><strong>Reflection:</strong> What can remain untouched?</p>
+  </div>
+
+  <div class="card">
+    <span class="badge">Module 4</span>
+    <h3>Legacy & Continuity</h3>
+    <p><strong>Concept:</strong> Wealth planning is generational planning.</p>
+    <p><strong>Reflection:</strong> Who benefits from your decisions?</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Sista Big Dress Wealth ©  
+  <br/>Educational Simulation • Culturecare-Aligned
+</footer>
+
+<script>
+function runProgram() {
+  const income = Number(document.getElementById("income").value);
+  const assets = Number(document.getElementById("assets").value);
+  const risk = document.getElementById("risk").value;
+  const timeline = document.getElementById("timeline").value;
+
+  const results = document.getElementById("results");
+  results.innerHTML = "";
+
+  if (!income || !assets || !risk || !timeline) {
+    results.innerHTML = "<p>Please complete all fields.</p>";
+    return;
+  }
+
+  const strategies = [];
+
+  if (income > 100000) {
+    strategies.push({
+      title: "Tax-Efficient Strategy",
+      reason: "High income requires minimizing tax drag over time.",
+      action: "Review account structures annually."
+    });
+  }
+
+  if (assets > 250000) {
+    strategies.push({
+      title: "Asset Location Management",
+      reason: "Placement matters as much as performance.",
+      action: "Map assets to taxable vs protected accounts."
+    });
+  }
+
+  if (risk === "high" && timeline === "long") {
+    strategies.push({
+      title: "Long-Horizon Growth Discipline",
+      reason: "Time absorbs volatility.",
+      action: "Commit to long-term holdings."
+    });
+  }
+
+  if (risk === "low") {
+    strategies.push({
+      title: "Capital Preservation Focus",
+      reason: "Stability protects continuity.",
+      action: "Strengthen buffers and reserves."
+    });
+  }
+
+  strategies.forEach(s => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <span class="badge">Strategy</span>
+      <h3>${s.title}</h3>
+      <p><strong>Why it matters:</strong> ${s.reason}</p>
+      <p><strong>Practice:</strong> ${s.action}</p>
+    `;
+    results.appendChild(div);
+  });
+}
 </script>
 
 </body>
